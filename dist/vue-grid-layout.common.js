@@ -3482,6 +3482,8 @@ function collides(l1
 )
 /*: boolean*/
 {
+  if(window.allow_zindex)
+    return false;
   if (l1 === l2) return false; // same element
 
   if (l1.x + l1.w <= l2.x) return false; // l1 is left of l2
